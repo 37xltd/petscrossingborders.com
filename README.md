@@ -12,4 +12,5 @@ The custom domain must be attached to the Pages project in Cloudflare. The sitem
 
 ## Analytics
 
-Google Analytics needs a real `G-XXXXXXXXXX` measurement ID from the owner's Google Analytics property. Add the official Google tag before publishing once that ID is available; do not ship a placeholder tag that would create misleading data.
+The shared 37X measurement stream is consent-gated in `analytics-consent.js`.
+Google Analytics is not requested unless the visitor explicitly accepts.

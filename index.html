@@ -14,9 +14,6 @@
   <meta property="og:url" content="https://petscrossingborders.com/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ef8354'/%3E%3Cpath d='M18 35c0-9 7-15 14-15s14 6 14 15c0 8-5 13-14 13S18 43 18 35Zm-3-9c-5-2-7-7-4-10s8 0 9 5m25 5c5-2 7-7 4-10s-8 0-9 5M25 19c-4-4-3-9 1-10s7 3 5 8m8 2c4-4 3-9-1-10s-7 3-5 8' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
-  <!-- Shared 37X GA4 property; replace only if a dedicated Pets Crossing Borders stream is created. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8V7G1S3EH"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-X8V7G1S3EH',{anonymize_ip:true});</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -73,5 +70,6 @@
     document.querySelector('#copy-link').addEventListener('click',async e=>{try{await navigator.clipboard.writeText(location.href.split('#')[0]+'#answer');e.currentTarget.textContent='Link copied';setTimeout(()=>e.currentTarget.textContent='Copy link',1800)}catch{e.currentTarget.textContent='Copy unavailable'}});
     document.querySelector('#native-share').addEventListener('click',async()=>{if(navigator.share) await navigator.share({title:document.title,url:location.href.split('#')[0]+'#answer'});else document.querySelector('#copy-link').click()});
   </script>
+  <script src="analytics-consent.js" defer></script>
 </body>
 </html>
