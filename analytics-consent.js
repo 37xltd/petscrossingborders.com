@@ -1,5 +1,5 @@
 (() => {
-  const measurementId = 'G-X8V7G1S3EH';
+  const measurementId = 'G-E58YLV3EYH';
   const key = '37x-ga-consent';
   const read = () => { try { return localStorage.getItem(key); } catch { return null; } };
   const save = (value) => { try { localStorage.setItem(key, value); } catch { /* Page-level choice still applies. */ } };
