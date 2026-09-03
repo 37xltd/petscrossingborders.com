@@ -63,6 +63,7 @@ dd{margin:0;font-weight:700;text-align:right}
 .source-row span:nth-child(2){flex:1}
 .source-row small{display:block;color:var(--muted)}
 .source-icon{color:var(--coral);font-size:20px}
+.airport-section{margin-top:28px}.airport-section .eyebrow{margin-bottom:10px}.airport-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.airport-grid article{position:relative;display:flex;flex-direction:column;padding:12px 70px 12px 12px;border:1px solid var(--line);background:white}.airport-grid b{font-size:12px}.airport-grid span,.airport-grid small{font-size:10px;color:var(--muted)}.airport-grid a{position:absolute;right:12px;top:12px;color:var(--coral);font-size:10px;font-weight:800}.airport-warning{padding:12px;border-left:4px solid var(--coral);background:#fff5ea!important}
 .share-strip{max-width:1100px;margin:55px auto;padding:20px 24px;border:1px solid #ded7ca;display:flex;align-items:center;gap:10px;background:#fbf8f0}
 .share-strip span:first-child{margin-right:auto}
 .share-strip strong,.share-strip small{display:block}
@@ -98,6 +99,7 @@ footer p,footer small{color:#8fa5b7;font-size:11px}
 .section-intro h2{font-size:39px}
 .answer-grid,.browse,.method{display:block}
 .evidence-panel{margin-top:40px}
+.airport-grid{grid-template-columns:1fr}
 .share-strip{margin:35px 22px;flex-wrap:wrap}
 .share-strip span:first-child{width:100%;margin-bottom:7px}
 .browse{padding:60px 22px}

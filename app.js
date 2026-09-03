@@ -11,6 +11,11 @@ function show(record) {
   document.querySelector('#destination-code').textContent = record.code;
   document.querySelector('#airport-count').textContent = Number(record.airportRecords).toLocaleString();
   document.querySelector('#airport-context').textContent = `${record.name} has ${Number(record.airportRecords).toLocaleString()} airport records in the R2 snapshot, including ${Number(record.scheduledLargeOrMediumAirports).toLocaleString()} large or medium airports with scheduled service. None is labelled as an approved pet entry point by this dataset.`;
+  document.querySelector('#airport-examples').innerHTML = (record.scheduledAirportExamples || []).map(airport => {
+    const code = airport.iata || airport.icao || 'No code';
+    const map = airport.latitude && airport.longitude ? `https://www.openstreetmap.org/?mlat=${encodeURIComponent(airport.latitude)}&mlon=${encodeURIComponent(airport.longitude)}#map=13/${encodeURIComponent(airport.latitude)}/${encodeURIComponent(airport.longitude)}` : '';
+    return `<article><b>${esc(airport.name)}</b><span>${esc(code)} · ${esc(airport.municipality || record.name)}</span><small>${esc(airport.type)}${airport.elevation_ft ? ` · ${esc(airport.elevation_ft)} ft elevation` : ''}</small>${map ? `<a href="${map}" rel="external">Map ↗</a>` : ''}</article>`;
+  }).join('') || '<p>No scheduled large or medium airport examples are available in this snapshot.</p>';
 }
 
 fetch('/data/destinations.json').then(response => response.json()).then(data => {
