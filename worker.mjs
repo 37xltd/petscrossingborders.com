@@ -10,10 +10,6 @@ export default {
       url.pathname = "/favicon.svg";
       return env.ASSETS.fetch(new Request(url, request));
     }
-    if (url.pathname === "/corrections") {
-      url.pathname = "/corrections.html";
-      return env.ASSETS.fetch(new Request(url, request));
-    }
     return env.ASSETS.fetch(request);
   },
 };
